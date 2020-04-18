@@ -6,11 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import com.rbs.multimodule.backend.domin.User;
+import com.rbs.multimodule.backend.repository.UserRepository;
+
 @RestController()
 @RequestMapping("/api")
-public class BackendController {
+public class WebController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BackendController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(WebController.class);
 
     public static final String HELLO_TEXT = "Hello from Spring Boot Backend!";
     public static final String SECURED_TEXT = "Hello from the secured resource!";
