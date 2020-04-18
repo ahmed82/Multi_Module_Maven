@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import com.rbs.multimodule.backend.domin.User;
+import com.rbs.multimodule.backend.exception.UserNotFoundException;
 import com.rbs.multimodule.backend.repository.UserRepository;
 
 @RestController()
