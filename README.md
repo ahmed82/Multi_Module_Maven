@@ -21,14 +21,16 @@ spring-boot-vuejs
 #### Frontend maven plugin 
 ref https://github.com/eirslett/frontend-maven-plugin
 ### Test the frontend only:
-cd into frontend directory and run CMD:
+[cd into frontend directory and run CMD]
 ```
 $ npm run serve
 ```
 
 ## Run the application:
 on the application root:
-($ mvn clean install)
+```
+$ mvn clean install
+```
 
 Run our complete Spring Boot App:
 [mvn --projects backend spring-boot:run]
