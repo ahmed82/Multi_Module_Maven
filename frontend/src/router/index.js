@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Service from '@/components/Service'
+import Bootstrap from '@/components/Bootstrap'
+import User from '@/components/User'
+import Login from '@/components/Login'
+import Protected from '@/components/Protected'
+
+// import store from './store'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/', name: 'Home', component: Home
   },
   {
     path: '/about',
@@ -17,11 +22,25 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  },
+  { path: '/callservice', component: Service },
+  { path: '/bootstrap', name: 'Bootstrap', component: Bootstrap },
+  { path: '/user', name: 'User', component: User },
+  { path: '/login', name: 'Login', component: Login },
+  {
+    path: '/protected',
+    component: Protected,
+    meta: {
+      requiresAuth: true
+    }
+  },
+
+  // otherwise redirect to home
+  { path: '*', redirect: '/' }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history', // uris without hashes #, see https://router.vuejs.org/guide/essentials/history-mode.html#html5-history-mode
   base: process.env.BASE_URL,
   routes
 })
