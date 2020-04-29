@@ -1,4 +1,12 @@
-# frontend
+# Frontend Vue JS
+
+## Installtion steps
+1- choco install npm
+2- npm install -g @vue/cli
+3- vue create frontend --no-git
+	see https://cli.vuejs.org/guide/
+4- npm install axios --save
+5- npm install bootstrap-vue
 
 ## Project setup
 ```
@@ -32,3 +40,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
