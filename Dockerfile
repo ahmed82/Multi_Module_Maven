@@ -1,7 +1,7 @@
 # Docker multi-stage build
 
 # 1. Building the App with Maven
-FROM maven:3-jdk-11
+# FROM maven:3-jdk-11
 
 ADD . /springbootvuejs
 WORKDIR /springbootvuejs
@@ -14,14 +14,15 @@ RUN mvn clean install
 
 
 # Just using the build artifact and then removing the build-container
-FROM openjdk:11-jdk
+# FROM openjdk:11-jdk
+FROM openjdk:8-jdk-alpine
 
-MAINTAINER Jonas Hecht
+MAINTAINER Ahmed AlSalih
 
 VOLUME /tmp
 
 # Add Spring Boot app.jar to Container
-COPY --from=0 "/springbootvuejs/backend/target/backend-0.0.1-SNAPSHOT.jar" app.jar
+COPY --from=0 "/springbootvuejs/backend/target/backend-1.0.jar" app.jar
 
 ENV JAVA_OPTS=""
 
