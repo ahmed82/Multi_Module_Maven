@@ -39,4 +39,16 @@ mvn --projects backend spring-boot:run
 Need to use 
 https://travis-ci.org/
 
-will deployed in huroko
+## Deployed in heroku
+using heroku Cli
+```
+heroku create
+```
+
+https://quiet-island-29743.herokuapp.com/ | https://git.heroku.com/quiet-island-29743.git
+
+Rename the Auto created app by :
+```
+heroku apps:rename --app quiet-island-29743 heroku-spring-vuejs
+```
+
