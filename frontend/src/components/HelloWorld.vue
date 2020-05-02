@@ -1,9 +1,7 @@
 <template>
   <div class="hello">
-    <button
-      class="”Search__button”"
-      @click="callRestService()"
-    >CALL Spring Boot REST backend service</button>
+    <!-- <button class="”Search__button”"  @click="callRestService()" >CALL Spring Boot REST backend service</button> -->
+    <b-btn @click="callRestService()">CALL Spring Boot REST backend service</b-btn>
     <h3 v-show="response.length">{{ response }}</h3>
   </div>
 </template>
