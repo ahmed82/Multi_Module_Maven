@@ -47,8 +47,14 @@ heroku create
 
 https://quiet-island-29743.herokuapp.com/ | https://git.heroku.com/quiet-island-29743.git
 
-Rename the Auto created app by :
+Rename the created application:
+
 ```
 heroku apps:rename --app quiet-island-29743 heroku-spring-vuejs
 ```
+### Deploy the application to heroku:
 
+```
+git push heroku master
+```
+https://devcenter.heroku.com/articles/getting-started-with-java#deploy-the-app
