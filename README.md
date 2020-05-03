@@ -46,6 +46,9 @@ heroku create
 ```
 
 https://quiet-island-29743.herokuapp.com/ | https://git.heroku.com/quiet-island-29743.git
+```
+git remote add heroku https://git.heroku.com/quiet-island-29743.git
+```
 
 Rename the created application:
 
@@ -58,3 +61,14 @@ heroku apps:rename --app quiet-island-29743 heroku-spring-vuejs
 git push heroku master
 ```
 https://devcenter.heroku.com/articles/getting-started-with-java#deploy-the-app
+```
+heroku ps:scale web=1
+heroku open
+heroku logs --tail
+```
+## Define a Procfile
+Heroku apps use "Procfile" file to declare what command should be executed to start the application.
+```
+web: java -Dserver.port=$PORT -jar backend/target/backend-2.6.2020.war
+```
+

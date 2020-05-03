@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar backend/target/backend-2.6.2020.war
