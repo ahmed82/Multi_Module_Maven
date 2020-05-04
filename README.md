@@ -42,7 +42,7 @@ https://travis-ci.org/
 # Heroku
 
 ## Deployed in heroku
-using heroku Cli
+using Heroku Cli
 ```
 heroku create
 ```
