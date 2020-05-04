@@ -92,4 +92,4 @@ java.runtime.version=1.8
 
 <img src="images/deploy.PNG" width="600" height="400"
 The pipeline setup:
-<img src="images/heroku-pipeline.PNG" width="600" height="400"
+<img src="images/heroku-pipeline.PNG" width="600" height="400">
