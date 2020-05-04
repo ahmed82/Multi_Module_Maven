@@ -90,6 +90,6 @@ java.runtime.version=1.8
 1 Connect the Github repository to the Heroku project 
 2 Use Heroku Pipelines feature, where we do get a full Continuous Delivery pipeline
 
-<img src="images/deploy.PNG" width="600" height="400"
+<img src="images/heroku-deploy.PNG" width="600" height="400">
 The pipeline setup:
-<img src="images/heroku-pipeline.PNG" width="600" height="400"
+<img src="images/heroku-pipeline.PNG" width="600" height="400">
