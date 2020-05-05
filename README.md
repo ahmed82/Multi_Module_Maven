@@ -1,3 +1,4 @@
+[![HitCount](http://hits.dwyl.com/ahmed82/Multi_Module_Maven.svg)](http://hits.dwyl.com/ahmed82/Multi_Module_Maven)
 
 ## Multi Module Maven Project.
 
