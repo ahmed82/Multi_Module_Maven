@@ -8,7 +8,7 @@
 
 ### 1. Backend (Java J2EE JEE / Spring Boot Framework)
 ### 2. Frontend (Vue JS Cli 3)
-
+<img src="images/app-logo.PNG" width="600" height="238">
 ## Project setup
 
 ```
