@@ -41,8 +41,7 @@ Run our complete Spring Boot App:
 ```
 mvn --projects backend spring-boot:run
 ```
-Need to use 
-https://travis-ci.org/
+
 
 # Heroku
 
@@ -70,7 +69,7 @@ heroku ps:scale web=1
 heroku open
 heroku logs --tail
 ```
-## Define a Procfile
+## Procfile
 Heroku apps use "Procfile" file to declare what command should be executed to start the application.
 ```
 web: java -jar target/java-getting-started-1.0.jar
@@ -98,3 +97,11 @@ java.runtime.version=1.8
 <img src="images/heroku-deploy.PNG" width="600" height="400">
 The pipeline setup:
 <img src="images/heroku-pipeline.PNG" width="600" height="400">
+
+
+# Automation
+In order to run the Automated build we need CI server.
+we can use Travis CI
+or
+GitHub Action -> which what I use in the project.
+
