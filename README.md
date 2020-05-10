@@ -1,3 +1,4 @@
+![](https://github.com/ahmed2/Multi_Module_Maven/workflows/.github/workflows/maven.yml/badge.svg)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://heroku-spring-vuejs.herokuapp.com)
 [![HitCount](http://hits.dwyl.com/ahmed82/Multi_Module_Maven.svg)](http://hits.dwyl.com/ahmed82/Multi_Module_Maven)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
@@ -99,9 +100,13 @@ The pipeline setup:
 <img src="images/heroku-pipeline.PNG" width="600" height="400">
 
 
-# Automation
+# Automation - Continuous-integration
 In order to run the Automated build we need CI server.
 we can use Travis CI
 or
 GitHub Action -> which what I use in the project.
+
+In .github/workflows, add a .yml or .yaml file for your workflow. .github/workflows/continuous-integration-workflow.yml.
+
+https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow
 
