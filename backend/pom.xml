@@ -16,6 +16,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.build.timestamp.format>yyyyMMdd-HHmmss</maven.build.timestamp.format>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<dependencies>
@@ -76,6 +79,22 @@
 		<plugin>
 		  <groupId>org.springframework.boot</groupId>
 		  <artifactId>spring-boot-maven-plugin</artifactId>
+		  <configuration>
+                	<!-- <failOnMissingWebXml>false</failOnMissingWebXml> -->
+			        <archive>
+			            <manifest>
+			                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+			                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+			            </manifest>
+			            <manifestEntries>
+							<boot-build-time>${maven.build.timestamp}</boot-build-time>
+							<boot-version>${project.version}</boot-version>
+							<Built-By>${user}</Built-By>
+                        	<Git-Branch>${git.branch}</Git-Branch>
+                        	<Git-Commit>${git.commit}</Git-Commit>
+			            </manifestEntries>
+			        </archive>
+			    </configuration>
 		</plugin>
 		<plugin>
 		  <artifactId>maven-resources-plugin</artifactId>

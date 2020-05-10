@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.rbs.multimodule.backend.domin.User;
 
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
