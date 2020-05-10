@@ -39,7 +39,7 @@ public class EmployeeController {
 
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
 
-    @RequestMapping(path = "/employee/", method = RequestMethod.POST)
+ /*   @RequestMapping(path = "/employee/", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public long addNewUser (@PathVariable("empid") long id,
     						@PathVariable("lastName") String lastName,
@@ -67,7 +67,7 @@ public class EmployeeController {
     public String redirectApi() {
         LOG.info("URL entered directly into the Browser, so we need to redirect...");
         return "forward:/";
-    }
+    }*/
     
     
     @GetMapping("/employees")
