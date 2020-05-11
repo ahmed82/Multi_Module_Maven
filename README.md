@@ -1,4 +1,4 @@
-![](https://github.com/ahmed2/Multi_Module_Maven/workflows/.github/workflows/maven.yml/badge.svg)
+![Java CI with Maven](https://github.com/ahmed82/Multi_Module_Maven/workflows/Java%20CI%20with%20Maven/badge.svg)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://heroku-spring-vuejs.herokuapp.com)
 [![HitCount](http://hits.dwyl.com/ahmed82/Multi_Module_Maven.svg)](http://hits.dwyl.com/ahmed82/Multi_Module_Maven)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")

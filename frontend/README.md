@@ -36,6 +36,7 @@ npm run test:e2e
 ### Lints and fixes files
 ```
 npm run lint
+npm run lint --fix
 ```
 
 ### Customize configuration

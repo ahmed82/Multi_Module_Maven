@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Service from '@/components/Service'
 import Bootstrap from '@/components/Bootstrap'
+import EmployeeTable from '@/components/EmployeeTable/EmployeeTable'
 import User from '@/components/User'
 import Login from '@/components/Login'
 import Protected from '@/components/Protected'
@@ -25,6 +26,7 @@ const routes = [
   },
   { path: '/callservice', component: Service },
   { path: '/bootstrap', name: 'Bootstrap', component: Bootstrap },
+  { path: '/employee', name: 'Employee', component: EmployeeTable },
   { path: '/user', name: 'User', component: User },
   { path: '/login', name: 'Login', component: Login },
   {
