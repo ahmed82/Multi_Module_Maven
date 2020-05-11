@@ -12,13 +12,17 @@ import javax.persistence.Table;
 public class Employee {
 	
 	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id",updatable = false, nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
+	@Column(name = "first_name", nullable = false, length = 50)
 	private String firstName;
+	
     private String lastName;
     private String address;
+    
+    @Column(nullable = true)
     private String phone;
     
     protected Employee() {}
