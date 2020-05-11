@@ -1,3 +1,5 @@
+[![Mavin Actions Status](https://github.com/ahmed2/Multi_Module_Maven/workflows/maven/badge.svg)](https://github.com/ahmed2/Multi_Module_Maven/actions)
+
 ![](https://github.com/ahmed2/Multi_Module_Maven/workflows/.github/workflows/maven.yml/badge.svg)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://heroku-spring-vuejs.herokuapp.com)
 [![HitCount](http://hits.dwyl.com/ahmed82/Multi_Module_Maven.svg)](http://hits.dwyl.com/ahmed82/Multi_Module_Maven)
