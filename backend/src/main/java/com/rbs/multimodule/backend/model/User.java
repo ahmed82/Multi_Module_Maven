@@ -1,4 +1,4 @@
-package com.rbs.multimodule.backend.domin;
+package com.rbs.multimodule.backend.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
