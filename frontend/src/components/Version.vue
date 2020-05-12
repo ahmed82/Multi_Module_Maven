@@ -1,6 +1,6 @@
 <template>
-    <div>
-        {{apiversion}}
+    <div id=footer >
+        &copy; {{apiversion}} Ahmed AlSalih
     </div>
 </template>
 
@@ -24,3 +24,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  /* html, body {
+  height: 100%;
+}*/
+
+#footer {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.0rem;            /* Footer height */
+}
+</style>
