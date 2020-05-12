@@ -38,7 +38,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
         .httpBasic().and()
         .authorizeRequests()
         //.antMatchers("/").permitAll()
-    	.antMatchers("/api/**").permitAll()
+    	.antMatchers("/api/**/*").permitAll()
         .antMatchers("/api/util/**").permitAll()
         .antMatchers("/api/secured").authenticated()
         //.anyRequest().authenticated() // protect all other requests
@@ -65,7 +65,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
 	  return new WebMvcConfigurerAdapter() {
 	    @Override
 	    public void addCorsMappings(CorsRegistry registry) {
-	      registry.addMapping("/api/**/*").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "Patch");;
+	      registry.addMapping("/api/**/*").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "PATCH");;
 	    }
 	  };
 	}

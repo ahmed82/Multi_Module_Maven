@@ -17,9 +17,11 @@ public class Employee {
 	private Long Id;
 	
 	@Column(name = "first_name", nullable = false, length = 50)
-	private String firstName;
+	private String firstname;
 	
-    private String lastName;
+	@Column(name = "last_name", nullable = false, length = 50)
+    private String lastname;
+	
     private String address;
     
     @Column(nullable = true)
@@ -28,66 +30,64 @@ public class Employee {
     protected Employee() {}
     
     
-
-	public Employee(Long id, String firstName, String lastName, String address, String phone) {
-		Id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.phone = phone;
-	}
-
-
-
 	@Override
 	public String toString() {
-		return "Employee [Id=" + Id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
+		return "Employee [Id=" + Id + ", firstName=" + firstname + ", lastName=" + lastname + ", address=" + address
 				+ ", phone=" + phone + "]";
 	}
-
 
 
 	public Long getId() {
 		return Id;
 	}
 
+
 	public void setId(Long id) {
 		Id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
+
 
 	public String getAddress() {
 		return address;
 	}
 
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 
 	public String getPhone() {
 		return phone;
 	}
 
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-    
-    
-    
+
+
+	
+
 
 }
