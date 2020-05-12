@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import axios from 'axios'
-const instance = axios.create({
-  auth: {
-    username: 'admin',
-    password: '123'
-  }
-})
+import axios from '../config/axios'
+// const instance = axios.create({
+//   auth: {
+//     username: 'admin',
+//     password: '123'
+//   }
+// })
 export default {
   data () {
     return {
@@ -19,7 +19,7 @@ export default {
     }
   },
   async mounted () {
-    const responds = await instance.get('http://localhost:8098/api/util/version')
+    const responds = await axios.get('/util/version')
     this.apiversion = responds.data
   }
 }

@@ -39,7 +39,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
         .authorizeRequests()
         //.antMatchers("/").permitAll()
     	.antMatchers("/api/**").permitAll()
-        .antMatchers("/api/user/**").permitAll()
+        .antMatchers("/api/util/**").permitAll()
         .antMatchers("/api/secured").authenticated()
         //.anyRequest().authenticated() // protect all other requests
 .and()
@@ -59,14 +59,29 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
 	}
 	
 	// Enable CORS globally
+	@SuppressWarnings("deprecation")
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 	  return new WebMvcConfigurerAdapter() {
 	    @Override
 	    public void addCorsMappings(CorsRegistry registry) {
-	      registry.addMapping("/api/*").allowedOrigins("http://localhost:8080");
+	      registry.addMapping("/api/**/*").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "Patch");;
 	    }
 	  };
 	}
-    
+/*	
+	@Bean
+	CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration configuration = new CorsConfiguration();
+		configuration.setAllowedOrigins(Arrays.asList("http://localhost:8080"));
+		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "Patch"));
+		configuration.setAllowCredentials(true);
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
+		
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		
+		source.registerCorsConfiguration("/**", configuration);
+		return source;
+	}
+    */
 }
