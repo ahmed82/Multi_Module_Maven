@@ -1,17 +1,17 @@
 <template>
-    <div>
-        {{apiversion}}
+    <div id=footer >
+        &copy; {{apiversion}} Ahmed AlSalih
     </div>
 </template>
 
 <script>
-import axios from 'axios'
-const instance = axios.create({
-  auth: {
-    username: 'admin',
-    password: '123'
-  }
-})
+import axios from '../config/axios'
+// const instance = axios.create({
+//   auth: {
+//     username: 'admin',
+//     password: '123'
+//   }
+// })
 export default {
   data () {
     return {
@@ -19,8 +19,22 @@ export default {
     }
   },
   async mounted () {
-    const responds = await instance.get('http://localhost:8098/api/util/version')
+    const responds = await axios.get('/util/version')
     this.apiversion = responds.data
   }
 }
 </script>
+
+<style scoped>
+  /* html, body {
+  height: 100%;
+}*/
+
+#footer {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.0rem;            /* Footer height */
+}
+</style>
