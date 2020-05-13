@@ -37,9 +37,9 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
     		.and()
         .httpBasic().and()
         .authorizeRequests()
-        //.antMatchers("/").permitAll()
+        .antMatchers("/").permitAll()
     	.antMatchers("/api/**/*").permitAll()
-        .antMatchers("/api/util/**").permitAll()
+        .antMatchers("/static/**/*").permitAll()
         .antMatchers("/api/secured").authenticated()
         //.anyRequest().authenticated() // protect all other requests
 .and()

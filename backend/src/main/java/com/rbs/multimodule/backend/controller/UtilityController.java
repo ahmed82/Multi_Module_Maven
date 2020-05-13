@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rbs.multimodule.backend.util.Manifest;
 
 @RestController
-@RequestMapping("/api/util")
 public class UtilityController {
 
     private final Logger logger = LoggerFactory.getLogger(UtilityController.class);
 	
-    @GetMapping("/version")
+    @GetMapping("/api/util/version")
     public ResponseEntity<?> getVersion(HttpServletRequest request) {
     	
     	try {
@@ -52,6 +51,12 @@ public class UtilityController {
 		return ResponseEntity.status(httpCode).contentType(MediaType.APPLICATION_JSON).body(body);
 	}
     
+    
+    @RequestMapping(value = "{_:^(?!index\\.html|api).*$}")
+    public String redirectApi() {
+    	logger.info("URL entered directly into the Browser, so we need to redirect...");
+        return "forward:/";
+    }
     
 
 }
