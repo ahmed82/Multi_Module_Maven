@@ -39,6 +39,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
         .authorizeRequests()
         .antMatchers("/").permitAll()
     	.antMatchers("/api/**/*").permitAll()
+    	.antMatchers("/api/util/**/*").permitAll()
         .antMatchers("/static/**/*").permitAll()
         .antMatchers("/api/secured").authenticated()
         //.anyRequest().authenticated() // protect all other requests
@@ -48,11 +49,6 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
 		super.configure(http);
 	}
 
-	/*@Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("foo").password("{noop}bar").roles("USER");
-    }*/
 	@Bean
 	PasswordEncoder passwordEncoder(){
 		return new BCryptPasswordEncoder();
@@ -65,7 +61,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
 	  return new WebMvcConfigurerAdapter() {
 	    @Override
 	    public void addCorsMappings(CorsRegistry registry) {
-	      registry.addMapping("/api/**/*").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "PATCH");;
+	      registry.addMapping("/**").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "PATCH");;
 	    }
 	  };
 	}
