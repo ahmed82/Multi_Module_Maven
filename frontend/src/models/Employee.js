@@ -15,11 +15,11 @@ export default class Employee {
   _phone = ''
 
   constructor ({
-    id, firstName, lastName, address, phone
+    id, firstname, lastname, address, phone
   }) {
     this._id = id
-    this._firstname = firstName || ''
-    this._lastname = lastName || ''
+    this._firstname = firstname || ''
+    this._lastname = lastname || ''
     this._address = address || ''
     this._phone = phone || ''
   }

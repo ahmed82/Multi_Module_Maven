@@ -68,6 +68,7 @@ export default {
   },
   destroyed () {
     const tbody = document.querySelector('table tbody')
+    if (tbody === null) return
     tbody.removeEventListener('click', this.handleInsideClick)
     window.removeEventListener('click', this.handleOutsideClick)
   },

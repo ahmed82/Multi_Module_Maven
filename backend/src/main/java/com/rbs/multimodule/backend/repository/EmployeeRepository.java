@@ -11,8 +11,8 @@ import com.rbs.multimodule.backend.model.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-	List<Employee> findByLastName(@Param("lastname") String lastname);
+	List<Employee> findByLastname(@Param("lastname") String lastname);
 
-	List<Employee> findByFirstName(@Param("firstname") String firstname);
+	List<Employee> findByFirstname(@Param("firstname") String firstname);
 
 }

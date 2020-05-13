@@ -78,7 +78,7 @@ export const methods = {
     }
   },
   async addEmployee (employee) {
-    const res = await axios.post('/employees', employee.toJSON())
+    const res = await axios.post('/employees', new Employee(employee))
 
     // eslint-disable-next-line no-param-reassign
     employee.id = res.data.id

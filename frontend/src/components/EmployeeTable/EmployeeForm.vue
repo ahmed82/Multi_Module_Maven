@@ -71,7 +71,7 @@ export default {
   },
   data () {
     return {
-      form: Employee.clone(this.employee)
+      form: this.employee.toJSON()
     }
   },
   computed: {

@@ -32,8 +32,8 @@ export default {
 
 #footer {
   font-size: 0.8em;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
   height: 2.0rem;            /* Footer height */
 }

@@ -34,4 +34,7 @@ export default {
   tbody tr {
     cursor: pointer;
   }
+  .is-selected {
+    background-color: red;
+  }
 </style>

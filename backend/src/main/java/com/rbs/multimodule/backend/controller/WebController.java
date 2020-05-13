@@ -16,7 +16,7 @@ public class WebController {
 
     private static final Logger LOG = LoggerFactory.getLogger(WebController.class);
 
-    public static final String HELLO_TEXT = "Hello from Spring Boot Application /DevOps";
+    public static final String HELLO_TEXT = "Hello from Spring Boot Application / DevOps";
     public static final String SECURED_TEXT = "Hello from the secured resource!";
 
     @Autowired
