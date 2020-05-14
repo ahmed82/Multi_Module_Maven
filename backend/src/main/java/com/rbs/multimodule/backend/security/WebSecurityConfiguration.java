@@ -42,7 +42,7 @@ public class WebSecurityConfiguration  extends WebSecurityConfigurerAdapter  {
     	.antMatchers("/api/util/**/*").permitAll()
         .antMatchers("/static/**/*").permitAll()
         .antMatchers("/api/secured").authenticated()
-        //.anyRequest().authenticated() // protect all other requests
+        .anyRequest().authenticated() // protect all other requests
 .and()
 		//disable cross site request forgery, as we don't use cookies - otherwise ALL PUT, POST, DELETE will get HTTP 403!
     	.csrf().disable();
