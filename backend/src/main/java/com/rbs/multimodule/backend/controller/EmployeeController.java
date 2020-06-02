@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.rbs.multimodule.backend.exception.UserNotFoundException;
@@ -127,8 +128,15 @@ public class EmployeeController {
 
 	@PatchMapping("/employees/{id}")
 	public Employee updateEmployee(@RequestBody Employee emp, @PathVariable long id) {
-		emp.setId(id);
-		return employeeService.save(emp);
+		try {
+			emp.setId(id);
+			return employeeService.save(emp);
+		} catch (Exception exc) {
+			throw new ResponseStatusException(
+			           HttpStatus.NOT_FOUND, "Foo Not Found", exc);
+		}
+		
+		
 	}	
 
 	@ResponseStatus(HttpStatus.NO_CONTENT)
